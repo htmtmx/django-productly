@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>Detalle del producto {{ product }}</title>
+{% endblock title %}
+
+{% block content %}
+    <main class="container-fluid g-0 text-center">
+        <h6>{{ product.name }}</h6>
+        <p>{{ product.stock }}</p>
+        <p>{{ product.score }}</p>
+        <p>{{ product.created_at }}</p>
+        <p>{{ product.category }}</p>
+    </main>
+{% endblock content %}
