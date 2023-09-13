@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # Names Apps
-    "products"
+    "products",
+    # Styles
+    "bootstrap5",
 ]
 
 MIDDLEWARE = [

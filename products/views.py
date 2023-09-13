@@ -4,7 +4,10 @@ from .models import Product
 
 # Create your views here.
 def index(request):
-    products = Product.objects.all().values()
-    print(products)
-    # return HttpResponse(products[0].name + " " + str(products[0].created_at))
-    return JsonResponse(list(products), safe=False)
+    products = Product.objects.all()
+
+    return render(
+        request, 'index.html', context={
+            'products': products
+        }
+    )
