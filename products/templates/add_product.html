@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Add New Product</title>
+{% endblock title %}
+
+{% block content %}
+    <main class="container-fluid g-0">
+        <section class="row">
+            <article class="col-6">
+                <form novalidate class="form-control" action="{% url "products:add_product" %}" method="POST">
+                    {% csrf_token %}
+                    {{ product_form }}
+                    <input type="submit">
+                </form>
+            </article>
+        </section>
+    </main>
+{% endblock content %}
